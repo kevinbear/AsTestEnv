@@ -27,11 +27,11 @@ void parse_config_file(Configuration& c)
         }
     }
     // ----------- for debug purpose ------------
-    std::cout <<"codebook file name: " << c.codebook_filename << std::endl;
-    std::cout <<"confige file name: " <<  c.config_filename << std::endl;
-    std::cout <<"encrypt: " << std::boolalpha << c.encrypt << std::endl;
-    std::cout << "infile name: " << c.infile << std::endl;
-    std::cout << "outfile name: " << c.outfile << std::endl;
+    // std::cout <<"codebook file name: " << c.codebook_filename << std::endl;
+    // std::cout <<"confige file name: " <<  c.config_filename << std::endl;
+    // std::cout <<"encrypt: " << std::boolalpha << c.encrypt << std::endl;
+    // std::cout << "infile name: " << c.infile << std::endl;
+    // std::cout << "outfile name: " << c.outfile << std::endl;
     // --------------------------------------
     configFile.close();
    //todo: parse the configuration file and store information in Configuration c
@@ -51,10 +51,10 @@ void read_codebook(Configuration& c, char codebook[], int length) //declaration 
         if(ch != ',') codebook[count++] = ch;
     }
     //--------- for debug purpose --------
-    for(int i=0; i<length; i++){
-        std::cout << codebook[i];
-    }
-    std::cout <<std::endl;
+    // for(int i=0; i<length; i++){
+    //     std::cout << codebook[i];
+    // }
+    // std::cout <<std::endl;
     //------------------------------------
     codebookFile.close();
 }
@@ -66,10 +66,11 @@ void read_input_file(std::string& msg, const Configuration& c)
 	std::ifstream inputFile(c.infile);
 
 	std::string line;
-	while(std::getline(inputFile, line)){   // read the input file line by line
-        msg += line +'\n';
-    }
-
+	// while(std::getline(inputFile, line)){   // read the input file line by line
+    //     msg += line +'\n';
+    // }
+    inputFile >> msg;
+    // std::cout << msg << std::endl;
     inputFile.close();
 	// todo: read the Configuration.infile and store the text in the msg string
 }
