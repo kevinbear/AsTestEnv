@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/A03.h
+string
+-
+defs.h
+../include/defs.h
+
+../include/defs.h
+string
+-
+
+/workspaces/AsTestEnv/src/autograder.cpp
+iostream
+-
+cstring
+-
+string
+-
+fstream
+-
+A03.h
+/workspaces/AsTestEnv/src/A03.h
+
