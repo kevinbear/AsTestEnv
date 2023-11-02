@@ -21,7 +21,13 @@ iostream
 -
 string
 -
+cstring
+-
 fstream
+-
+cstdlib
+-
+sstream
 -
 A03.h
 /workspaces/AsTestEnv/src/A03.h
