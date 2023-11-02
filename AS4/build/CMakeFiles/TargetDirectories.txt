@@ -1,0 +1,4 @@
+/workspaces/AS4/build/CMakeFiles/rebuild_cache.dir
+/workspaces/AS4/build/CMakeFiles/edit_cache.dir
+/workspaces/AS4/build/CMakeFiles/A04.dir
+/workspaces/AS4/build/CMakeFiles/MyLibrary.dir

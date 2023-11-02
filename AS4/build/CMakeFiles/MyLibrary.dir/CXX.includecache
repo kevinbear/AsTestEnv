@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/CS52Vector.h
+string
+-
+stdexcept
+-
+
+/workspaces/AS4/src/Vector.cpp
+CS52Vector.h
+/workspaces/AS4/src/CS52Vector.h
+iostream
+-
+

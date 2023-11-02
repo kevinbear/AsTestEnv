@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/A04.dir/src/A04.cpp.o  -o A04  libMyLibrary.a 
