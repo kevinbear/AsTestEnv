@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspaces/AsTestEnv/AS4
+CMAKE_SOURCE_DIR = /workspaces/AsTestEnv/AS3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspaces/AsTestEnv/AS4/build
+CMAKE_BINARY_DIR = /workspaces/AsTestEnv/AS3/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/AsTestEnv/AS4/build/CMakeFiles /workspaces/AsTestEnv/AS4/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/AsTestEnv/AS3/build/CMakeFiles /workspaces/AsTestEnv/AS3/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/AsTestEnv/AS4/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/AsTestEnv/AS3/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,84 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named A04
+# Target rules for targets named A03
 
 # Build rule for target.
-A04: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 A04
-.PHONY : A04
+A03: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 A03
+.PHONY : A03
 
 # fast build rule for target.
-A04/fast:
-	$(MAKE) -f CMakeFiles/A04.dir/build.make CMakeFiles/A04.dir/build
-.PHONY : A04/fast
+A03/fast:
+	$(MAKE) -f CMakeFiles/A03.dir/build.make CMakeFiles/A03.dir/build
+.PHONY : A03/fast
 
-src/unittest.o: src/unittest.cpp.o
+#=============================================================================
+# Target rules for targets named MyLibrary
 
-.PHONY : src/unittest.o
+# Build rule for target.
+MyLibrary: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MyLibrary
+.PHONY : MyLibrary
+
+# fast build rule for target.
+MyLibrary/fast:
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/build
+.PHONY : MyLibrary/fast
+
+src/A03.o: src/A03.cpp.o
+
+.PHONY : src/A03.o
 
 # target to build an object file
-src/unittest.cpp.o:
-	$(MAKE) -f CMakeFiles/A04.dir/build.make CMakeFiles/A04.dir/src/unittest.cpp.o
-.PHONY : src/unittest.cpp.o
+src/A03.cpp.o:
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/src/A03.cpp.o
+.PHONY : src/A03.cpp.o
 
-src/unittest.i: src/unittest.cpp.i
+src/A03.i: src/A03.cpp.i
 
-.PHONY : src/unittest.i
+.PHONY : src/A03.i
 
 # target to preprocess a source file
-src/unittest.cpp.i:
-	$(MAKE) -f CMakeFiles/A04.dir/build.make CMakeFiles/A04.dir/src/unittest.cpp.i
-.PHONY : src/unittest.cpp.i
+src/A03.cpp.i:
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/src/A03.cpp.i
+.PHONY : src/A03.cpp.i
 
-src/unittest.s: src/unittest.cpp.s
+src/A03.s: src/A03.cpp.s
 
-.PHONY : src/unittest.s
+.PHONY : src/A03.s
 
 # target to generate assembly for a file
-src/unittest.cpp.s:
-	$(MAKE) -f CMakeFiles/A04.dir/build.make CMakeFiles/A04.dir/src/unittest.cpp.s
-.PHONY : src/unittest.cpp.s
+src/A03.cpp.s:
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/src/A03.cpp.s
+.PHONY : src/A03.cpp.s
+
+src/autograder.o: src/autograder.cpp.o
+
+.PHONY : src/autograder.o
+
+# target to build an object file
+src/autograder.cpp.o:
+	$(MAKE) -f CMakeFiles/A03.dir/build.make CMakeFiles/A03.dir/src/autograder.cpp.o
+.PHONY : src/autograder.cpp.o
+
+src/autograder.i: src/autograder.cpp.i
+
+.PHONY : src/autograder.i
+
+# target to preprocess a source file
+src/autograder.cpp.i:
+	$(MAKE) -f CMakeFiles/A03.dir/build.make CMakeFiles/A03.dir/src/autograder.cpp.i
+.PHONY : src/autograder.cpp.i
+
+src/autograder.s: src/autograder.cpp.s
+
+.PHONY : src/autograder.s
+
+# target to generate assembly for a file
+src/autograder.cpp.s:
+	$(MAKE) -f CMakeFiles/A03.dir/build.make CMakeFiles/A03.dir/src/autograder.cpp.s
+.PHONY : src/autograder.cpp.s
 
 # Help Target
 help:
@@ -158,10 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... A04"
-	@echo "... src/unittest.o"
-	@echo "... src/unittest.i"
-	@echo "... src/unittest.s"
+	@echo "... A03"
+	@echo "... MyLibrary"
+	@echo "... src/A03.o"
+	@echo "... src/A03.i"
+	@echo "... src/A03.s"
+	@echo "... src/autograder.o"
+	@echo "... src/autograder.i"
+	@echo "... src/autograder.s"
 .PHONY : help
 
 

@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/workspaces/AsTestEnv/AS4/include 
+CXX_INCLUDES = -I/workspaces/AsTestEnv/AS3/include 
 

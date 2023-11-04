@@ -6,25 +6,25 @@
 
 #IncludeRegexTransform: 
 
-../include/CS52Vector.h
+../include/A03.h
 string
 -
-stdexcept
--
-iostream
+defs.h
+../include/defs.h
+
+../include/defs.h
+string
 -
 
-/workspaces/AsTestEnv/AS4/src/unittest.cpp
-fstream
--
+/workspaces/AsTestEnv/AS3/src/autograder.cpp
 iostream
--
-sstream
--
-cstdlib
 -
 cstring
 -
-CS52Vector.h
-/workspaces/AsTestEnv/AS4/src/CS52Vector.h
+string
+-
+fstream
+-
+A03.h
+/workspaces/AsTestEnv/AS3/src/A03.h
 

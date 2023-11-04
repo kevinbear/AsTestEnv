@@ -1,10 +1,5 @@
 #include "CS52Vector.h"
 #include <iostream>
-// struct Vector{
-//     int size = 0; 
-//     int capacity = 0; 
-//     int *data = nullptr;
-// };
 
 void construct_vector ( Vector& v, int size, int initVal){
     v.size = size; // set the size
@@ -66,19 +61,21 @@ int capacity ( const Vector& v ){
 // Erases the elements of Vector v but does not change capacity.
 void clear ( Vector& v ){
     // std::cout << "clear" << std::endl;
-    delete v.data;
-    v.data = nullptr;
+    for(int i=0; i< v.size; i++){
+        v.data[i] = 0;
+    }
     v.size = 0;
 }
 
 // If Vector v is empty return true, else false.
 bool empty ( const Vector& v ){
-    // std::cout << "empty" << std::endl;
-    return v.size <= 0 ? true : false;
+    // if(v.size <= 0) return true;
+    // else return false;
+    return (v.size <= 0) ? true : false;
 }
 
 // Returns a reference to the first element or throws an exception
-int& front ( const Vector& v ){
+int& front (const Vector& v ){
     // std::cout << "front" << std::endl;
     if(empty(v))
         throw std::out_of_range("front exception");
@@ -86,18 +83,30 @@ int& front ( const Vector& v ){
 }
 
 // Add element to the end of the Vector v.
-void push_back ( Vector& v, int element){
+void push_back (Vector& v, int element){
     // std::cout << "push_back" << std::endl;
-    if(v.size >= v.capacity){
-        int* nv = new int[v.size*2];
+    if(v.size < 0) v.size = 0;
+    v.size++; // increment the size of vector
+    
+    if(v.size > v.capacity && v.size > 1){ // the capacity is growinng up
+        // std::cout << "push_back size > cap [increase the size] copy the old data to new one" << std::endl;
+        int* nv = new int[v.size]; // create an new dynamic array
         for(int i=0; i<v.size; i++){ // copy the data from vector to new array
+        // std::cout << "before crash " << i << std::endl;
             nv[i] = v.data[i];
         }
-        nv[v.size] = element;
-        v.data = nv;
-    }else{
+        nv[v.size - 1] = element;
+        v.data = nv; // point to the new vector
+        v.capacity++; // update the capacity
+    }else if (v.size > v.capacity && v.size <= 1){ // init condition
+        // std::cout << "push_back size > cap [increase the size of data] create a new data" << std::endl;
+        int* nv = new int[v.size]; // create an new dynamic array
+        nv[v.size - 1] = element;
+        v.data = nv; // point to the new vector
+        v.capacity++; // update the capacity
+    }else if (v.size <= v.capacity){
+        // std::cout << "push_back size <= cap push the value after the current data" << std::endl;
         v.data[v.size-1] = element;
-        v.capacity++;
     }
 }
 

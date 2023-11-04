@@ -1,4 +1,4 @@
-# Install script for directory: /workspaces/AsTestEnv/AS4
+# Install script for directory: /workspaces/AsTestEnv/AS3
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/workspaces/AsTestEnv/AS4/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/workspaces/AsTestEnv/AS3/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

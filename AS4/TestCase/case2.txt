@@ -1,0 +1,31 @@
+specifier b
+Constructor unspec
+pushback 0
+pushback 1
+pushback 2
+pushback 3
+printArray
+size
+capacity
+at 1
+at 1,88
+printArray
+pushback 55
+pushback 75
+printArray
+clear
+size
+capacity
+empty
+pushback 10
+pushback 20
+pushback 30
+pushback 40
+pushback 50
+pushback 60
+size
+capacity
+find 30
+find 999
+traverse
+Destructor

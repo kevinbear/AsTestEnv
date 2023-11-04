@@ -1,0 +1,4 @@
+/workspaces/AsTestEnv/AS3/build/CMakeFiles/rebuild_cache.dir
+/workspaces/AsTestEnv/AS3/build/CMakeFiles/edit_cache.dir
+/workspaces/AsTestEnv/AS3/build/CMakeFiles/A03.dir
+/workspaces/AsTestEnv/AS3/build/CMakeFiles/MyLibrary.dir

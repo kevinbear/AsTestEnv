@@ -44,17 +44,16 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspaces/AS4
+CMAKE_SOURCE_DIR = /workspaces/AsTestEnv/AS4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspaces/AS4/build
+CMAKE_BINARY_DIR = /workspaces/AsTestEnv/AS4/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
 all: CMakeFiles/A04.dir/all
-all: CMakeFiles/MyLibrary.dir/all
 
 .PHONY : all
 
@@ -65,7 +64,6 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/A04.dir/clean
-clean: CMakeFiles/MyLibrary.dir/clean
 
 .PHONY : clean
 
@@ -73,17 +71,17 @@ clean: CMakeFiles/MyLibrary.dir/clean
 # Target rules for target CMakeFiles/A04.dir
 
 # All Build rule for target.
-CMakeFiles/A04.dir/all: CMakeFiles/MyLibrary.dir/all
+CMakeFiles/A04.dir/all:
 	$(MAKE) -f CMakeFiles/A04.dir/build.make CMakeFiles/A04.dir/depend
 	$(MAKE) -f CMakeFiles/A04.dir/build.make CMakeFiles/A04.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/AS4/build/CMakeFiles --progress-num=1,2 "Built target A04"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/AsTestEnv/AS4/build/CMakeFiles --progress-num=1,2 "Built target A04"
 .PHONY : CMakeFiles/A04.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/A04.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/AS4/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/AsTestEnv/AS4/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/A04.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/AS4/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/AsTestEnv/AS4/build/CMakeFiles 0
 .PHONY : CMakeFiles/A04.dir/rule
 
 # Convenience name for target.
@@ -95,33 +93,6 @@ A04: CMakeFiles/A04.dir/rule
 CMakeFiles/A04.dir/clean:
 	$(MAKE) -f CMakeFiles/A04.dir/build.make CMakeFiles/A04.dir/clean
 .PHONY : CMakeFiles/A04.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/MyLibrary.dir
-
-# All Build rule for target.
-CMakeFiles/MyLibrary.dir/all:
-	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/depend
-	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/AS4/build/CMakeFiles --progress-num=3,4 "Built target MyLibrary"
-.PHONY : CMakeFiles/MyLibrary.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/MyLibrary.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/AS4/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/MyLibrary.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/AS4/build/CMakeFiles 0
-.PHONY : CMakeFiles/MyLibrary.dir/rule
-
-# Convenience name for target.
-MyLibrary: CMakeFiles/MyLibrary.dir/rule
-
-.PHONY : MyLibrary
-
-# clean rule for target.
-CMakeFiles/MyLibrary.dir/clean:
-	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/clean
-.PHONY : CMakeFiles/MyLibrary.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

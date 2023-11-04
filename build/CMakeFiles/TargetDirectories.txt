@@ -1,4 +1,0 @@
-/workspaces/AsTestEnv/build/CMakeFiles/rebuild_cache.dir
-/workspaces/AsTestEnv/build/CMakeFiles/edit_cache.dir
-/workspaces/AsTestEnv/build/CMakeFiles/A03.dir
-/workspaces/AsTestEnv/build/CMakeFiles/MyLibrary.dir

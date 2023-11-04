@@ -1,0 +1,14 @@
+specifier a
+Constructor 5,0
+printArray
+size
+capacity
+at 0,10
+at 3,5
+printArray
+front
+back
+Destructor 
+front
+back
+at 0,9
