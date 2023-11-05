@@ -2,7 +2,8 @@
 ### Test environment for homework assignment
 ### I am not sure this enviroment is working for Windows or not. But If you have Linux enviroment or macOS, this should work perfectly. 
 ### Before you use it, plese download the whole project to your computer or if you have codespace, you can also run on it.
-![Build](https://github.com/canonical/ubuntu-image/actions/workflows/build-and-test.yml/badge.svg)
+![Static Badge](https://img.shields.io/badge/:badgeContent)
+
 Use `git clone https://github.com/kevinbear/AsTestEnv.git` clone all project to your local.
 
 ## AS3: Assignment 3
