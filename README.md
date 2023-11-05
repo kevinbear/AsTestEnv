@@ -1,9 +1,10 @@
 # AsTestEnv: assignment test environment
 ### Test environment for homework assignment
-### I am not sure this enviroment is working for Windows or not. But If you have Linux enviroment or macOS, this should work perfectly. 
-### Before you use it, plese download the whole project to your computer or if you have codespace, you can also run on it.
+### If you have a Linux or macOS, this should work perfectly. 
+### Before you use it, please download the whole project to your computer. Or if you have codespace, you can also run on it.
 ![ubuntu](https://img.shields.io/badge/os-ubuntu-orange)
 ![macOS](https://img.shields.io/badge/os-macOS-blue)
+![codespace](https://img.shields.io/badge/github-codespace-green)
 
 Use `git clone https://github.com/kevinbear/AsTestEnv.git` clone all project to your local.
 
