@@ -2,8 +2,11 @@
 ### Test environment for homework assignment
 If you have a Linux or macOS, this should work perfectly. 
 Before you use it, please download the whole project to your computer. Or if you have codespace, you can also run on it.
+
 ![ubuntu](https://img.shields.io/badge/os-ubuntu-orange)
+
 ![macOS](https://img.shields.io/badge/os-macOS-blue)
+
 ![codespace](https://img.shields.io/badge/github-codespace-green)
 
 Use `git clone https://github.com/kevinbear/AsTestEnv.git` to clone all projects to your local.
