@@ -3,6 +3,12 @@
 If you have a Linux or macOS, this should work perfectly. 
 Before you use it, please download the whole project to your computer. Or if you have codespace, you can also run on it.
 
+#### Pre-requisites tools:
++ cmake `cmake /V`
++ make `make -v`
++ git  `git -v` 
+
+  
 ![ubuntu](https://img.shields.io/badge/os-ubuntu-orange)
 
 ![macOS](https://img.shields.io/badge/os-macOS-blue)
